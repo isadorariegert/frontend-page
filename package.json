@@ -1,0 +1,17 @@
+{
+  "name": "sass",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node-sass src/sass/main2.scss src/css/style2.css -w",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "mockApi": "json-server -w db.json"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.16.3",
+    "node-sass": "^5.0.0"
+  }
+}
