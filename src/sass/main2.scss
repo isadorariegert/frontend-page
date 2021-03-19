@@ -1,19 +1,21 @@
-/*
-## Colors
-
-### Primary
-
-Very Dark Magenta: hsl(300, 43%, 22%)  #502050
-Soft Pink: hsl(333, 80%, 67%)  	#ee68a4
-
-### Neutral
-
-Dark Grayish Magenta: hsl(303, 10%, 53%)  #937b92
-Light Grayish Magenta: hsl(300, 24%, 96%)  	#f7f2f7
-White: hsl(0, 0%, 100%)  #ffffff
-
-*/
-
+$color-base-black: #000000;
+$color-base-white: #ffffff;
+$color-base-gray-200: #f0f5f5;
+$color-base-gray-300: #cbd6d6;
+$color-base-gray-500: #9faeaf;
+$color-base-gray-700: #2e3d45;
+$color-brand-primary-300: #0f92ff;
+$color-brand-primary-500: #1374de;
+$color-brand-primary-900: #003fa2;
+$color-brand-secondary-300: #28cccc;
+$color-brand-secondary-500: #008e9b;
+$color-brand-secondary-900: #007680;
+$color-brand-tertiary-500: #ffc800;
+$color-highlight-primary-text: #00ffff;
+$color-transparency-light-10: rgba(255, 255, 255, 0.1);
+$color-transparency-dark-25: rgba(0, 0, 0, 0.25);
+$color-transparency-dark-50: rgba(0, 0, 0, 0.5);
+$color-transparency-dark-75: rgba(0, 0, 0, 0.75);
 body {
     margin: 0;
     padding: 0;
@@ -21,7 +23,7 @@ body {
     background-image: url(../images/bg-pattern-top-mobile.svg), url(../images/bg-pattern-bottom-mobile.svg);
     background-repeat: no-repeat, no-repeat;
     background-position: top left, bottom right;
-    font-family: "Spartan", Arial, Helvetica, sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 .container {
@@ -35,20 +37,38 @@ body {
     }
 }
 
+.bg__topo {
+    background: $color-brand-primary-300;
+}
+
+.menu {
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu a {
+    padding: 30px;
+    text-decoration: none;
+    color: $color-base-white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
 .header {
     max-width: 345px;
     text-align: center;
     margin: 0 auto;
     padding-top: 50px;
     &__title {
-        color: #502050;
+        color: $color-brand-primary-900;
         font-size: 38px;
-        font-weight: bolder;
+        font-weight: bold;
         padding: 10px;
         line-height: 1;
     }
     &__subtitle {
-        color: #937b92;
+        color: $color-brand-primary-300;
         margin: 0 5px 5px 0;
         line-height: 1.5;
         font-size: 15px;
@@ -60,14 +80,14 @@ body {
     max-width: 335px;
     margin: 0 auto;
     &__item {
-        background: #f7f2f7;
+        background: $color-base-gray-200;
         padding: 10px;
         margin: 20px 0 10px 0;
         text-align: center;
         border-radius: 10px;
         h2 {
             font-size: 14px;
-            color: #502050;
+            color: $color-brand-primary-500;
             margin: 6px;
         }
         &--star {
@@ -85,12 +105,12 @@ body {
     max-width: 335px;
     margin: 0px auto;
     &__item {
-        background: #502050;
+        background: $color-brand-primary-500;
         border-radius: 10px;
         padding: 35px;
         margin-top: 15px;
         p {
-            color: #f7f2f7;
+            color: $color-base-white;
             line-height: 1.5;
             font-size: 14px;
             font-weight: 100;
@@ -109,13 +129,13 @@ body {
     &__titles {
         margin-left: 20px;
         h2 {
-            color: #f7f2f7;
+            color: $color-base-white;
             padding: 0;
             margin-bottom: 5px;
             font-size: medium;
         }
         h3 {
-            color: #ee68a4;
+            color: $color-highlight-primary-text;
             padding: 0;
             margin: 0;
             font-size: 14px;
@@ -128,13 +148,13 @@ body {
         background: transparent;
         border: none;
         font-size: 16px;
-        font-weight: 500;
-        color: #ee68a4;
+        font-weight: 600;
+        color: $color-base-white;
         padding: 5px;
         outline: none;
         &:hover {
             cursor: pointer;
-            color: #f7f2f7;
+            color: $color-brand-tertiary-500;
         }
     }
 }
@@ -167,10 +187,10 @@ body {
     flex-direction: column;
     input {
         margin: 0;
-        background: #5020503d;
         border: none;
-        border-radius: 10px;
-        color: #f7f2f7;
+        //border-radius: 10px;
+        color: $color-base-gray-300;
+        border-top: 0
     }
     figure {
         margin: 0;
@@ -182,7 +202,7 @@ body {
     }
     label {
         font-size: 14px;
-        color: #f7f2f7;
+        color: $color-base-gray-200;
         margin: 10px 0 10px 0;
     }
     &__title {
@@ -190,22 +210,22 @@ body {
         margin: 0 auto;
         text-align: center;
         font-size: 18px;
-        background: #502050;
-        color: #f7f2f7;
+        background: $color-brand-tertiary-500;
+        color: #000000;
         padding: 10px;
-        border-radius: 5px;
+        border-radius: 50px;
     }
     &__container {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        background: #937b92d8;
+        background: $color-brand-secondary-500;
         padding: 30px;
         margin-top: 20px;
         align-items: center;
         border-radius: 10px;
         border: none;
-        box-shadow: 2px 2px 4px 4px#502050a1;
+        box-shadow: 2px 2px 3px 3px $color-brand-secondary-900;
     }
     &__id {
         display: flex;
@@ -213,7 +233,10 @@ body {
         width: 100%;
         max-width: 600px;
         input {
-            box-shadow: 1px 1px 2px 2px#502050a1;
+            border: none;
+            border-bottom: 3px solid $color-base-gray-500;
+            background: transparent;
+            //box-shadow: 0 0 2px 0 $color-brand-secondary-900;
             height: 25px;
             margin-bottom: 15px;
         }
@@ -229,7 +252,7 @@ body {
     }
     &__image {
         align-self: center;
-        background: #5020509c;
+        background: $color-transparency-dark-25;
         border-radius: 50%;
         padding: 10px;
         width: 70px;
@@ -241,22 +264,22 @@ body {
         flex-direction: column;
         textarea {
             margin: 0 0 15px 0;
-            background: #5020503d;
+            background: $color-base-gray-300;
             border-radius: 10px;
             border: none;
-            box-shadow: 1px 1px 2px 2px #502050a1;
-            color: #f7f2f7;
+            box-shadow: none; //1px 1px 2px 2px $color-brand-secondary-900;
+            color: $color-base-gray-300;
             padding: 10px;
         }
         button {
             display: flex;
             padding: 5px 10px;
-            background: #50205062;
+            background: $color-brand-tertiary-500;
             align-self: flex-end;
             border: none;
-            border-radius: 10px;
-            box-shadow: 1px 1px 2px 2px #50205079;
-            color: #f7f2f7;
+            border-radius: 50px;
+            box-shadow: 1px 1px 2px 2px $color-brand-secondary-900;
+            color: $color-base-black;
             font-size: 12px;
         }
     }
@@ -271,7 +294,7 @@ body {
     }
     .container {
         margin: 0 auto;
-        max-width: 1440px;
+        max-width: 100%;
         &--1 {
             display: flex;
             justify-content: space-around;
@@ -285,7 +308,7 @@ body {
         text-align: left;
         max-width: 500px;
         &__title {
-            font-size: 54px;
+            font-size: 50px;
             padding: 0;
             margin: 15px 0;
         }
@@ -334,14 +357,29 @@ body {
         }
     }
     .boxMessage {
-        max-width: 1000px;
+        max-width: 100%;
         margin: 150px auto;
+        background: $color-brand-secondary-500;
+        &__container {
+            display: block;
+            flex-wrap: wrap;
+            background: $color-base-gray-200;
+            width: 600px;
+            margin: 0 auto;
+            padding: 30px;
+            align-items: center;
+            border-radius: 10px;
+            border: none;
+            box-shadow: none;
+        }
         input {
             padding: 10px;
             font-size: 16px;
+            color: $color-base-black;
         }
         label {
             font-size: 20px;
+            color: $color-base-black;
         }
         &__msg textarea {
             font-size: 16px;
@@ -349,14 +387,13 @@ body {
         &__msg button {
             padding: 10px 30px;
             font-size: 16px;
+            box-shadow: none;
         }
         &__title {
             width: 100%;
             max-width: 600px;
             font-size: 34px;
-            background: #502050;
-            border-radius: 10px;
-            color: white;
+            color: $color-base-black;
             padding: 11px;
             &--img {
                 background: transparent;
@@ -367,6 +404,189 @@ body {
         &__image {
             width: 30%;
             margin-bottom: 20px;
+        }
+    }
+}
+
+// ------------------------------ PAGINA ABOUT --------------------------//
+.bg__topo--container {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+.bg__darkblue {
+    background: $color-brand-primary-900;
+}
+
+.text__baseWhite {
+    color: $color-base-white;
+}
+
+.text__baseBlack {
+    color: $color-base-black;
+}
+
+.card__about {
+    margin: 0 auto;
+    margin-top: 40px;
+    width: 60%;
+    padding: 25px;
+    border-radius: 15px;
+    &--img {
+        width: 50%;
+        display: block;
+        margin: 0 auto;
+    }
+    p {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+}
+
+@media (min-width: 1440px) {
+    .card__about {
+        max-width: 1000px;
+        min-height: 420px;
+        display: flex;
+        justify-content: space-between;
+        p {
+            font-size: 20px;
+            line-height: 1.5;
+            padding: 20px;
+            width: 50%;
+            align-self: center;
+            //border: 3px solid;
+        }
+        &--img {
+            width: 40%;
+            padding: 30px;
+            display: block;
+            margin: 0 auto;
+            //border: 3px solid;
+        }
+    }
+}
+
+// -------------------------- PÁGINA CONTATO -----------------------//
+form {
+    display: flex;
+    justify-content: center;
+}
+
+.formContact {
+    display: block;
+    flex-direction: column;
+    margin-top: 50px;
+    min-width: 300px;
+    max-width: 600px;
+    width: 50%;
+    border: none;
+    color: $color-base-gray-700;
+    font-size: 1rem;
+    font-weight: bold;
+    input,
+    textarea {
+        border: 1px solid $color-base-gray-500;
+        border-radius: 5px;
+    }
+    &__id {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+        label {
+            visibility: hidden;
+        }
+        input {
+            padding: 15px;
+        }
+    }
+    &__icon {
+        display: flex;
+        input {
+            flex-grow: 1;
+            margin-left: 10px;
+        }
+        .fas {
+            align-self: center;
+        }
+    }
+}
+
+.formContact__radio {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    // input {
+    //     // margin-right: 12px;
+    // }
+}
+
+.formContact__select {
+    display: flex;
+    margin-bottom: 20px;
+    select {
+        flex-grow: 1;
+        padding: 5px;
+    }
+    label {
+        margin-right: 10px;
+        margin-left: 10px;
+        align-self: center;
+    }
+}
+
+.formContact__msg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 20px;
+    label {
+        align-self: center;
+        margin-left: 10px;
+    }
+}
+
+.formContact__button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border-radius: 50px;
+    margin-top: 10px;
+    background: $color-brand-tertiary-500;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    color: $color-base-gray-700;
+}
+
+@media (min-width: 1440px) {
+    .formContact {
+        font-size: 20px;
+        // margin-top: 20px;
+        input {
+            // margin-bottom: 20px;
+            padding: 15px;
+            font-size: 20px;
+        }
+        &__radio {
+            margin-bottom: 30px;
+        }
+        &__select {
+            margin-bottom: 30px;
+            select {
+                padding: 12px;
+                font-size: 1.2rem;
+            }
+        }
+        &__msg {
+            .formContact__icon {
+                margin-bottom: 10px;
+            }
+        }
+        &__button {
+            padding: 15px;
+            font-size: 1.5rem;
         }
     }
 }
