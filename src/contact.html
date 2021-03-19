@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="../src/font-awesome/css/all.min.css">
+    <script src="form.js" defer></script>
+    <title>Contact</title>
+</head>
+
+<body>
+    <div class="container">
+        <section class="bg__topo">
+            <header class="menu">
+                <a href="reindex.html">Home</a>
+                <a href="#" class="menu__contato">Contact</a>
+                <a href="about.html" class="menu__sobre">About</a>
+                <a href="faq.html" class="menu__faq">FAQ</a>
+            </header>
+            <div class="bg__topo--container">
+                <h1 class="header__title bgTopo__title">
+                    Lorem Ipsum
+                </h1>
+            </div>
+        </section>
+        <form id="form" onsubmit="return showForm()">
+            <fieldset class="formContact">
+                <div class="formContact__id">
+                    <label for="name">Name</label>
+                    <div class="formContact__icon">
+                        <i class="fas fa-user fa-lg"></i>
+                        <input type="text" id="contactName" placeholder="Name" required>
+                    </div>
+                    <label for="emai">Email</label>
+                    <div class="formContact__icon">
+                        <i class="fas fa-envelope fa-lg"></i>
+                        <input type="email" id="contactEmail" placeholder="Email" required>
+                    </div>
+                </div>
+                <div class="formContact__radio">
+                    <div>
+                        <label for="gender">Female</label>
+                        <input type="radio" name="gender" value="female" checked>
+                    </div>
+                    <div>
+                        <label for="gender">Male</label>
+                        <input type="radio" name="gender" value="male">
+                    </div>
+                    <div>
+                        <label for="gender">Other</label>
+                        <input type="radio" name="gender" value="other">
+                    </div>
+                </div>
+                <div class="formContact__select formContact__icon">
+                    <i class="fas fa-check-square fa-lg"></i>
+                    <label for="about" class="label-visible">About</label>
+                    <select name="about" id="about">
+                        <option value="lorem">Lorem</option>
+                        <option value="ipsum">Ipsum</option>
+                        <option value="dolor">Dolor</option>
+                        <option value="sit">Sit amet</option>
+                    </select>
+                </div>
+                <div class="formContact__msg">
+                    <div class="formContact__icon">
+                        <i class="fas fa-comment-dots fa-lg"></i>
+                        <label for="message">Message:</label>
+                    </div>
+                    <textarea name="message" id="contactMessage" cols="30" rows="10" required></textarea>
+                </div>
+                <div class="fomrContact__checkbox">
+                    <input type="checkbox" name="contactCheck" id="contactCheck">
+                    <label for="newsletter">Assign Newsletter</label>
+                </div>
+                <button class="formContact__button">submit</button>
+            </fieldset>
+        </form>
+    </div>
